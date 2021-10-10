@@ -4,11 +4,6 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const errforemail = document.getElementById('errforemail');
 const errforPass = document.getElementById('errforPass');
-let emailValues = 'rmzngrn0404@gmail.com';
-let passwordValue = 'Ramo0404';
-
-
-
 
 btn.addEventListener('click', function () {
 
@@ -55,31 +50,6 @@ btn.addEventListener('click', function () {
     }
 
 })
-
-
-// function myfun() {
-
-//     let emailValues = 'rmzngrn0404@gmail.com';
-//     let passwordValue = 'Ramo0404';
-
-//     if (email.value !== emailValues && password.value !== passwordValue) {
-//         errforPass.innerHTML = 'Email or password is incorrect';
-//         alert('Email or password is incorrect');
-//         errforPass.classList.add('login-error')
-//         password.classList.add('login-error-input');
-//         email.classList.add('login-error-input')
-//     }
-
-//     else
-//     {
-//         errforPass.classList.remove('login-error')
-//         password.classList.remove('login-error-input')
-//         errforemail.classList.remove('login-error')
-//         email.classList.remove('login-error-input')
-//     }
-    
-// }
-
 
 function showPassword() {
 

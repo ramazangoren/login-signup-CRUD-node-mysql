@@ -1,11 +1,10 @@
 const mysql = require('mysql');
 
-
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'Ramo0404',
-    database: 'login_signup'
+    password: 'password',
+    database: 'database'
 });
 
 
@@ -77,7 +76,7 @@ exports.update = (req, res) => {
         //   const hashedPassword = await bcrypt.hash(password, 8);
         //    console.log(hashedPassword);
 
-        db.query("UPDATE users SET ?", { email: email, password: password}, (error, results) => {
+        db.query("UPDATE  users SET password= ? WHERE email = '{email}'", {  password: password}, (error, results) => {
             if (error) {
                 console.log(error);
             }

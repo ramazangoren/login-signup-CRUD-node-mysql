@@ -22,16 +22,16 @@ router.post('/forgotpassword', (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'rmzngrn0404@gmail.com',
-            pass: 'Ramo0404'
+            user: 'youremail',
+            pass: 'password'
         }
     });
 
     const mailOptions = {
-        from: 'rmogrn0404@gmail.com',
+        from: 'email',
         to: req.body.email,
-        subject: `message from rmogrn0404@gmail.com`,
-        text: `<a href="http://localhost:4000/reset"> reset your password </a>`
+        subject: `message from <anemail>`,
+        text: `some random text`
     }
 
     transporter.sendMail(mailOptions, (err, info)=> {
@@ -49,9 +49,9 @@ router.get('/reset', (req, res) => {
     res.render('resetpassword')
 })
 
-router.post('/reset', (req, res) => {
-    res.render('resetpassword')
-})
+// router.post('/reset', (req, res) => {
+//     res.render('resetpassword')
+// })
 
 router.get('*', (req, res) => {
     res.render('404')

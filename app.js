@@ -3,7 +3,7 @@ const mysql = require('mysql');
 const path = require('path');
 const hbs = require('hbs');
 
-const port = 4000;
+const PORT =  process.env.PORT ||  4000;
 
 const app = express();
 
@@ -11,8 +11,8 @@ const app = express();
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'Ramo0404',
-    database: 'login_signup'
+    password: 'password',
+    database: 'database'
 });
 
 
@@ -47,6 +47,6 @@ app.use('/', require('./routes/signup'));
 
 
 
-app.listen(port, (req, res) => {
-    console.log('listening on port ' + port);
+app.listen(PORT, (req, res) => {
+    console.log('listening on port ' + PORT);
 });
